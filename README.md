@@ -40,3 +40,10 @@ Output is a markdown table per section:
 ## License
 
 MIT — see LICENSE.
+
+## Docker
+
+```bash
+docker pull wallydk24/trendwatch
+docker run --rm wallydk24/trendwatch digest --no-enrich
+```
