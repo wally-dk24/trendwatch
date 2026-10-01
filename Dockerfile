@@ -10,7 +10,10 @@ FROM python:3.12-alpine
 
 WORKDIR /app
 COPY trendwatch.py ./
+COPY brand/ ./brand/
 USER 1000
+EXPOSE 8080
 
+# Web UI: docker run -p 8080:8080 wallydk24/trendwatch serve
 ENTRYPOINT ["python3", "/app/trendwatch.py"]
 CMD ["--help"]

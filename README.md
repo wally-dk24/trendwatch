@@ -47,3 +47,17 @@ MIT — see LICENSE.
 docker pull wallydk24/trendwatch
 docker run --rm wallydk24/trendwatch digest --no-enrich
 ```
+
+## Web UI
+
+`trendwatch serve` runs a small web UI in the shared wally-brand skin — run a
+digest (trending / one topic / the full agent digest) and browse the results
+as cards, with the last run cached:
+
+```bash
+docker run -p 8080:8080 wallydk24/trendwatch serve
+# or locally:
+python3 trendwatch.py serve --port 8080
+```
+
+Then open http://localhost:8080/. `GET /healthz` returns `ok`.
